@@ -3,7 +3,7 @@ function camposCorrectos({ titulo, duracion, imdb, linkTrailer }) {
       Swal.fire({
         title: "Error!",
         text: "No puede haber campos vacíos",
-        imageUrl: "../assets/error.png",
+        imageUrl: "./assets/error.png",
         imageWidth: 400,
         imageHeight: 200,
         imageAlt: "Custom image"

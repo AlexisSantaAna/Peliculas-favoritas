@@ -40,24 +40,26 @@ function mostrarPeliculas() {
 
     peliculas.forEach((pelicula) => {
         let div = document.createElement('div')
-        div.className = "col-4";
-        div.innerHTML = `        
-            <div class="card">
-                <div class="card-body id="card-btn">        
+        let div2 = document.createElement('div')
+        let div3 = document.createElement('div')
+        div.className = "col-4"
+        div2.className = "card"
+        div3.className = "card-body"
+        div3.innerHTML = `       
                     <h5 class="card-title">${pelicula.titulo}</h5>
                     <p class="card-text">Duración: ${pelicula.duracion} minutos.</p>
                     <a href="${pelicula.imdb}" target="blank">Link IMDB</a><br>
-                    <a href="${pelicula.linkTrailer}" target="blank">Link trailer</a>
-                </div>
-            </div>
-        `
+                    <a href="${pelicula.linkTrailer}" target="blank">Link trailer</a><br>
+                `
         const btnBorrar = document.createElement('button')
         btnBorrar.innerText = "Eliminar"
         btnBorrar.classList.add('btn', 'btn-primary')
         btnBorrar.addEventListener('click', () => {
             eliminarPelicula(pelicula)
         })
-        div.appendChild(btnBorrar)
+        div.appendChild(div2)
+        div2.appendChild(div3)
+        div3.appendChild(btnBorrar)
         listadoDePeliculas.appendChild(div)
     })
 }
@@ -70,7 +72,7 @@ function eliminarPelicula(pelicula) {
         showCancelButton: true,
         confirmButtonColor: "#3085d6",
         cancelButtonColor: "#d33",
-        confirmButtonText: "Yes, delete it!"
+        confirmButtonText: "Si, borrar!"
     }).then((result) => {
         if (result.isConfirmed) {
             peliculas = peliculas.filter((item) => item.titulo != pelicula.titulo);
