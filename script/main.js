@@ -1,8 +1,10 @@
 //Clase constructora de pelis
 class Pelicula {
-    constructor(titulo, duracion, imdb, linkTrailer) {
+    constructor(titulo, director, genero, protagonistas, imdb, linkTrailer) {
         this.titulo = titulo;
-        this.duracion = duracion;
+        this.director = director;
+        this.genero = genero;
+        this.protagonistas = protagonistas;
         this.imdb = imdb;
         this.linkTrailer = linkTrailer
     }
@@ -19,10 +21,12 @@ function agregarPelicula(e) {
     //Obtengo datos del formulario y los guardo en variables
     const formulario = new FormData(e.target)
     const titulo = formulario.get('titulo')
-    const duracion = formulario.get('duracion')
+    const director = formulario.get('director')
+    const genero = formulario.get('genero')
+    const protagonistas = formulario.get('protagonistas')
     const imdb = formulario.get('imdb')
     const linkTrailer = formulario.get('linkTrailer')
-    const pelicula = new Pelicula(titulo, duracion, imdb, linkTrailer)
+    const pelicula = new Pelicula(titulo, director, genero, protagonistas, imdb, linkTrailer)
     //Si la validación da true, se agrega pelicula. Si da false no retorna nada.
     if (camposCorrectos(pelicula)) {
         peliculas.push(pelicula)
@@ -42,18 +46,20 @@ function mostrarPeliculas() {
         let div = document.createElement('div')
         let div2 = document.createElement('div')
         let div3 = document.createElement('div')
-        div.className = "col-4"
+        div.className = "col-12 col-sm-6 col-md-4 col-lg-3"
         div2.className = "card"
         div3.className = "card-body"
         div3.innerHTML = `       
-                    <h5 class="card-title">${pelicula.titulo}</h5>
-                    <p class="card-text">Duración: ${pelicula.duracion} minutos.</p>
+                    <h5 class="card-title h3 text-center">${pelicula.titulo}</h5>
+                    <p class="card-text"><b>Director</b>: ${pelicula.director}</p>
+                    <p class="card-text"><b>Género</b>: ${pelicula.genero}</p>
+                    <p class="card-text"><b>Protagonistas</b>: ${pelicula.protagonistas}</p>
                     <a href="${pelicula.imdb}" target="blank">Link IMDB</a><br>
                     <a href="${pelicula.linkTrailer}" target="blank">Link trailer</a><br>
                 `
         const btnBorrar = document.createElement('button')
         btnBorrar.innerText = "Eliminar"
-        btnBorrar.classList.add('btn', 'btn-primary')
+        btnBorrar.classList.add('btn', 'btn-borrar', 'btn-sm', 'btn-rounded', 'mt-3')
         btnBorrar.addEventListener('click', () => {
             eliminarPelicula(pelicula)
         })

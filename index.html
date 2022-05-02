@@ -9,42 +9,89 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Sweet Alert 2 -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <!-- Google Fonts -->
+    <!-- Google Fonts Roboto-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- Google Fonts Roboto Condensed -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" />
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.css" rel="stylesheet" />
-    <title>Peliculas para ver!</title>
+    <title>Películas para ver!</title>
     <!-- css -->
-    <script src="css/styles.css"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
+    <!-- main -->
     <main class="container">
-        <h1>Películas para mirar</h1>
-        <form id="formulario-pelicula">
-            <div class="form-outline mb-3">
-                <input name="titulo" type="text" id="titulo" class="form-control" />
-                <label class="form-label" for="form4Example1">Titulo</label>
+        <h1 class="title text-center">CINELISTA</h1>
+        <p class="subtitle text-center">Guardá de forma simple esas películas que querés ver y no tenés dónde anotarlas
+        </p>
+        <div class="card">
+            <div class="card-body">
+                <!-- formulario -->
+                <form id="formulario-pelicula">
+                    <div class="row">
+                        <!-- columna 1 -->
+                        <div class="col-lg">
+                            <div class="form-outline mb-3">
+                                <input name="titulo" type="text" id="titulo" class="form-control" />
+                                <label class="form-label" for="form4Example1">Titulo</label>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <input name="director" type="text" id="director" class="form-control" />
+                                <label class="form-label" for="form4Example1">Director</label>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <input name="genero" type="text" id="genero" class="form-control" />
+                                <label class="form-label" for="form4Example1">Género</label>
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="form-outline mb-3">
+                                <input name="protagonistas" type="text" id="protagonistas" class="form-control" />
+                                <label class="form-label" for="form4Example1">Protagonistas</label>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <input name="imdb" type="text" id="imdb" class="form-control" />
+                                <label class="form-label" for="form4Example1">Link IMDB</label>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <input name="linkTrailer" type="text" id="linkTrailer" class="form-control" />
+                                <label class="form-label" for="form4Example1">Link trailer</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Guardar película</button>
+                </form>
             </div>
-            <div class="form-outline mb-3">
-                <input name="duracion" type="number" id="duracion" class="form-control" />
-                <label class="form-label" for="form4Example1">Duración</label>
-            </div>
-            <div class="form-outline mb-3">
-                <input name="imdb" type="text" id="imdb" class="form-control" />
-                <label class="form-label" for="form4Example1">Link IMDB</label>
-            </div>
-            <div class="form-outline mb-3">
-                <input name="linkTrailer" type="text" id="linkTrailer" class="form-control" />
-                <label class="form-label" for="form4Example1">Link trailer</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Guardar película</button>
-        </form>
-
+        </div>
         <div id="listadoDePeliculas" class="listado row">
         </div>
     </main>
 
+    <!-- footer -->
+    <footer class="text-center text-lg-start align-items-center justify-content-center footer">
+        <div class="text-center p-3">
+            <p>Website designed & developed by <span>Alexis Santa Ana</span></p>
+        </div>
+        <div class="col-md-12 col-lg-4">
+            <h4 class="h6 py-3">FOLLOW THANOS</h4>
+            <ul class="navbar-nav d-flex flex-row">
+                <li class="me-lg-0"><a href="https://www.facebook.com/MarvelLatinoamerica" target="_blank"><i
+                            class="fab fa-facebook-square fa-lg"></i></i></a></li>
+                <li class="me-lg-0"><a href="https://www.instagram.com/marvel/" target="_blank"><i
+                            class="fab fa-instagram fa-lg"></i></a></li>
+                <li class="me-lg-0"><a href="https://twitter.com/Marvel" target="_blank"><i
+                            class="fab fa-twitter-square fa-lg"></i></a></li>
+                <li class="me-lg-0"><a href="https://www.youtube.com/results?search_query=thanos" target="_blank"><i
+                            class="fab fa-youtube fa-lg"></i></a></li>
+                <li class="me-lg-0"><a
+                        href="https://ar.pinterest.com/search/pins/?q=thanos&rs=typed&term_meta[]=thanos%7Ctyped"
+                        target="_blank"><i class="fab fa-pinterest-square fa-lg"></i></a></li>
+            </ul>
+        </div>
+    </footer>
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.0.0/mdb.min.js"></script>

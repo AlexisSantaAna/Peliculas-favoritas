@@ -1,0 +1,99 @@
+:root {
+    --main-teal: #6DF9D6;
+    --main-purple: #7904a0;
+    --main-black: #202020;
+    --main-white: #f0f0f0;
+    --main-gray: #929292;
+    --main-orange: #f9bf3b;
+    --main-darkorange: #f6ac00;
+    --main-blue: rgb(50, 50, 255);
+    --main-darkblue: rgb(0, 0, 251);
+    --main-lightblue: #00bff3;
+    --main-transp: rgba(0, 0, 255, 0.075);
+    ;
+}
+
+@font-face {
+    font-family: "MovieNite";
+    src: url("../assets/MovieNite.ttf")
+}
+
+/* main */
+body {
+    background-image: linear-gradient(to bottom right, #56718c, #546d86, #495f76, #405467, #374859);
+}
+
+.title,
+.subtitle {
+    color: white;
+}
+
+.title {
+    font-size: 10rem;
+    font-family: "MovieNite", serif;
+    margin-bottom: 0 !important;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+/* cards */
+.card {
+    margin-top: 1rem;
+}
+
+.card-body p {
+    margin-bottom: .4rem !important;
+}
+
+.btn-borrar {
+    background-color: rgb(221, 51, 51);
+    color: white;
+}
+
+.btn-borrar:hover {
+    color: white;
+    background-color: rgb(218, 12, 12);
+}
+
+/* footer */
+.footer {
+    background-color: #282828;
+    color: var(--main-white);
+    margin-top: 3rem;
+}
+
+.footer p {
+    margin-bottom: 0 !important;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer span {
+    color: var(--main-darkorange)
+}
+
+.footer ul li a {
+    color: var(--main-gray);
+    transition: .4s;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.footer ul li a:hover {
+    color: var(--main-white)
+}
+
+
+/* media querys */
+@media only screen and (max-width: 600px) {
+    .title {
+        font-size: 7rem;
+    }
+}
