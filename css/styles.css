@@ -36,7 +36,7 @@ body {
 .title {
     font-size: 10rem;
     font-family: "MovieNite", serif;
-    margin-bottom: 0 !important;
+    margin: 0;
 }
 
 .subtitle {
@@ -46,6 +46,12 @@ body {
 
 .container {
     min-height: 100vh;
+}
+.form-footer {
+    display: flex;
+}
+.form-footer span {
+    align-self: flex-end;
 }
 
 /* cards */
@@ -114,5 +120,21 @@ body {
 @media only screen and (max-width: 600px) {
     .title {
         font-size: 7rem;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .form-footer {
+        flex-direction: column;
+    }
+    .form-footer span {
+        font-size: .9rem;
+        margin-top: 1rem;
+        align-self: flex-start;
+    }
+    .form-footer button {
+        align-self: flex-start;
+    }
+    .card-body {
+        padding: 1.2rem;
     }
 }
