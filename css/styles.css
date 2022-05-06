@@ -18,6 +18,11 @@
     src: url("../assets/MovieNite.ttf")
 }
 
+@font-face {
+    font-family: "SpringInMay";
+    src: url("../assets/Spring\ in\ May.ttf")
+}
+
 /* main */
 body {
     background-image: linear-gradient(to bottom right, #56718c, #546d86, #495f76, #405467, #374859);
@@ -64,32 +69,46 @@ body {
 
 /* footer */
 .footer {
-    background-color: #282828;
+    background-color: #444444;
     color: var(--main-white);
     margin-top: 3rem;
 }
 
 .footer p {
     margin-bottom: 0 !important;
-    color: white;
+    color: var(--main-gray);
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer h4 {
+    font-family: "SpringInMay", serif;
+    font-size: 2.4rem;
 }
 
 .footer span {
     color: var(--main-darkorange)
 }
 
-.footer ul li a {
-    color: var(--main-gray);
-    transition: .4s;
-    cursor: pointer;
-    margin-right: 2rem;
+.icons {
+    justify-content: center;    
 }
 
-.footer ul li a:hover {
-    color: var(--main-white)
+.icons a {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;    
+    margin: 0 1rem !important;
 }
 
+.icons a {
+    color: white;
+    font-size: 2.4rem;
+    transition: all;
+}
+
+.icons a:hover {
+    color: #303030;
+}
 
 /* media querys */
 @media only screen and (max-width: 600px) {
