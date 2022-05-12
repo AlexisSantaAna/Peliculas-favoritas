@@ -4,13 +4,12 @@
     --main-black: #202020;
     --main-white: #f0f0f0;
     --main-gray: #929292;
-    --main-orange: #f9bf3b;
-    --main-darkorange: #f6ac00;
+    --main-orange: #f5c518;
+    --main-darkorange: #c28800;
     --main-blue: rgb(50, 50, 255);
     --main-darkblue: rgb(0, 0, 251);
     --main-lightblue: #00bff3;
     --main-transp: rgba(0, 0, 255, 0.075);
-    ;
 }
 
 @font-face {
@@ -51,6 +50,16 @@ body {
 
 #logo {
     width: 400px;
+}
+
+.btn-1 {
+    background-color: var(--main-black);
+    color: #ffffff;
+}
+
+.btn-1:hover {
+    color: #ffffff;
+    background-color: #000000;
 }
 
 /* form controls */
@@ -113,10 +122,15 @@ body {
 .footer h4 {
     font-family: "SpringInMay", serif;
     font-size: 2.4rem;
+    color: var(--main-orange);
 }
 
-.footer span {
-    color: var(--main-darkorange)
+.footer a {
+    color: var(--main-orange)
+}
+
+.footer a:hover {
+    color: var(--main-darkorange);
 }
 
 .icons {
