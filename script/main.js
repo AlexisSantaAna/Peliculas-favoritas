@@ -68,6 +68,17 @@ function mostrarPeliculas() {
         div3.appendChild(btnBorrar)
         listadoDePeliculas.appendChild(div)
     })
+
+    //Agregar class animation al lastChild
+    if (listadoDePeliculas.lastChild) {
+        let lastChild = listadoDePeliculas.lastChild
+        lastChild.className = "col-12 col-sm-6 col-md-4 col-lg-3 animate__animated animate__zoomIn"
+        //Se borra al cargar DOM, para que se ejecute sólo al ser creado lastChild
+        window.addEventListener('DOMContentLoaded', () => {
+            lastChild.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+        });
+    }
+
 }
 
 function eliminarPelicula(pelicula) {

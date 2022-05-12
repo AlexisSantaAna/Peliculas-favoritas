@@ -40,15 +40,43 @@ body {
 .container {
     min-height: 100vh;
 }
+
 .form-footer {
     display: flex;
 }
+
 .form-footer span {
     align-self: flex-end;
 }
 
 #logo {
     width: 400px;
+}
+
+/* form controls */
+
+/* border inputs*/
+
+.form-outline .form-control:focus~.form-notch .form-notch-leading {
+    border-top: .125rem solid #000000;
+    border-bottom: .125rem solid #000000;
+    border-left: .125rem solid #000000;
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-middle {
+    border-bottom: .125rem solid;
+    border-color: #000000;
+}
+
+.form-outline .form-control:focus~.form-notch .form-notch-trailing {
+    border-color: currentcolor currentcolor currentcolor #000000;
+    border-bottom: .125rem solid #000000;
+    border-right: .125rem solid #000000;
+    border-top: .125rem solid #000000;
+}
+
+.form-outline .form-control:focus~.form-label {
+    color: #000000;
 }
 
 /* cards */
@@ -92,13 +120,13 @@ body {
 }
 
 .icons {
-    justify-content: center;    
+    justify-content: center;
 }
 
 .icons a {
     width: 55px;
     height: 55px;
-    border-radius: 50%;    
+    border-radius: 50%;
     margin: 0 1rem !important;
 }
 
@@ -117,22 +145,27 @@ body {
     #logo {
         width: 300px;
     }
+
     .subtitle {
         font-size: 1.1rem;
     }
 }
+
 @media only screen and (max-width: 992px) {
     .form-footer {
         flex-direction: column;
     }
+
     .form-footer span {
         font-size: .9rem;
         margin-top: 1rem;
         align-self: flex-start;
     }
+
     .form-footer button {
         align-self: flex-start;
     }
+
     .card-body {
         padding: 1.2rem;
     }
