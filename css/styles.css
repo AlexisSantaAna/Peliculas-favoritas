@@ -25,18 +25,11 @@
 
 /* main */
 body {
-    background-image: linear-gradient(to bottom right, #56718c, #546d86, #495f76, #405467, #374859);
+    background-color: #000000;
 }
 
-.title,
 .subtitle {
     color: white;
-}
-
-.title {
-    font-size: 10rem;
-    font-family: "MovieNite", serif;
-    margin: 0;
 }
 
 .subtitle {
@@ -52,6 +45,10 @@ body {
 }
 .form-footer span {
     align-self: flex-end;
+}
+
+#logo {
+    width: 400px;
 }
 
 /* cards */
@@ -75,7 +72,6 @@ body {
 
 /* footer */
 .footer {
-    background-color: #444444;
     color: var(--main-white);
     margin-top: 3rem;
 }
@@ -118,8 +114,11 @@ body {
 
 /* media querys */
 @media only screen and (max-width: 600px) {
-    .title {
-        font-size: 7rem;
+    #logo {
+        width: 300px;
+    }
+    .subtitle {
+        font-size: 1.1rem;
     }
 }
 @media only screen and (max-width: 992px) {
