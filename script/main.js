@@ -55,12 +55,9 @@ function mostrarPeliculas() {
                     <p class="card-text"><b>Género</b>: ${pelicula.genero}</p>
                     <p class="card-text"><b>Protagonistas</b>: ${pelicula.protagonistas}</p>
                 `
-        if (pelicula.imdb != "") {
-            div3.innerHTML += `<p><b>Link IMDB: </b><a href="${pelicula.imdb}" target="blank">Click aquí</a></p>`
-        }
-        if (pelicula.linkTrailer != "") {            
-            div3.innerHTML += `<p><b>Link Trailer: </b><a href="${pelicula.linkTrailer}" target="blank">Click aquí</a></p>`
-        }
+        pelicula.imdb != "" && (div3.innerHTML += `<p><b>Link IMDB: </b><a href="${pelicula.imdb}" target="blank">Click aquí</a></p>`)        
+        pelicula.linkTrailer != "" && (div3.innerHTML += `<p><b>Link Trailer: </b><a href="${pelicula.linkTrailer}" target="blank">Click aquí</a></p>`)
+        
         const btnBorrar = document.createElement('button')
         btnBorrar.innerText = "Eliminar"
         btnBorrar.classList.add('btn', 'btn-borrar', 'btn-sm', 'btn-rounded', 'mt-3')
